@@ -29,7 +29,7 @@ while i < possible_iterations:
         list_choices.append(letter_string)
         i = i + 1
 
-class Node: # modificēts no https://github.com/codebasics/data-structures-algorithms-python/blob/master/data_structures/7_Tree/7_tree.py#L4
+class Node: # modified from https://github.com/codebasics/data-structures-algorithms-python/blob/master/data_structures/7_Tree/7_tree.py#L4
 
     def __init__(self, data):
         self.parent = None
