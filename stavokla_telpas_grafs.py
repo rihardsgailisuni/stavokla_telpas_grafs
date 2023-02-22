@@ -29,12 +29,12 @@ while i < possible_iterations:
         list_choices.append(letter_string)
         i = i + 1
 
-class Node: 
+class Node: # modificēts no https://github.com/codebasics/data-structures-algorithms-python/blob/master/data_structures/7_Tree/7_tree.py#L4
 
     def __init__(self, data):
-        self.data = data
         self.parent = None
         self.children = []
+        self.data = data
 
     def children_add(self, child):
         child.parent = self
@@ -49,13 +49,12 @@ class Node:
         return iteration
 
     def print_tree(self):
-        indentation = ' ' * self.draw_tree_structure() * 3
-        lines = indentation + "|--" 
+        lines_draw = '   ' * self.draw_tree_structure() + "|--"
         if self.parent:
             pass
         else: 
             ""
-        print(lines + self.data)
+        print(lines_draw + self.data)
         if self.children:
             for child in self.children:
                 child.print_tree()
